@@ -1,25 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
-  GeistProvider, 
-  CssBaseline, 
   Page,
   Grid, 
-  Text
+  Text,
+  Button
 } from '@geist-ui/react'
 
-// TODO: IMPORT SECTIONS (excluding Header and Footer, which is in layout)
 
-// Examples:
-//  import Hero from '../components/sections/Hero';
-//  import FeaturesTiles from '../components/sections/FeaturesTiles';
-//  import FeaturesSplit from '../components/sections/FeaturesSplit';
-//  import Testimonial from '../components/sections/Testimonial';
-//  import Cta from '../components/sections/Cta';
-
-import Header from './../components/layout/Header'
-import Footer from './../components/layout/Footer'
-
-const Home = () => {
+export const HomePage = () => {
 
   return (
     <Page.Content>
@@ -32,16 +20,45 @@ const Home = () => {
       </Grid.Container>
       {/* Tag Section */}
       <Grid.Container gap="2" justify="center">
-        <Grid xs={12}>
+        <Grid xs={12} gap="5">
           <Text h2 type="error">For developers</Text>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          
         </Grid>
         <Grid xs={12}>
           <Text h2 type="success">For designers</Text>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Courses</Button>
+          <Button size="mini">Browser Extensions</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
+          <Button size="mini">Title</Button>
         </Grid>
       </Grid.Container>
     </Page.Content>
   );
 }
-
-export default Home;
 
