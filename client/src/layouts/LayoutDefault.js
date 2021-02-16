@@ -3,7 +3,7 @@ import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import { GeistProvider, CssBaseLine, Page } from '@geist-ui/react'
 
-export const LayoutDefault = ({ children }) => {
+export const LayoutDefault = (props) => {
 
   const [themeType, setThemeType] = useState('dark');
 
@@ -17,9 +17,9 @@ export const LayoutDefault = ({ children }) => {
         <CssBaseLine />
         <Page dotBackdrop="true">
           {/* Page.Header */}
-          <Header setThemeType switchThemes/>
+          <Header themeType={themeType} switchThemes={switchThemes} />
           {/* Page.Content: Renders Home */}
-          {children}
+          {props.children}
           {/* Page.Footer */}
           <Footer />
         </Page>
@@ -27,3 +27,4 @@ export const LayoutDefault = ({ children }) => {
     </>
   )
 };
+

@@ -15,11 +15,11 @@ import {
     Moon
 } from '@geist-ui/react-icons'
 
-export const Header = ({ ...props }) => {
+export const Header = ({themeType, switchThemes}) => {
 
     let displayIcon = 'null'
 
-    if (props.themeType === 'dark') {
+    if (themeType === 'dark') {
         displayIcon = <Moon />
     } else {
         displayIcon = <Sun />
@@ -35,7 +35,7 @@ export const Header = ({ ...props }) => {
               <Container justify="end">
                 <Input auto size="small" icon={ <Search /> } placeholder="Search" />
                 <Spacer x={0.5}/>
-                <Button icon={displayIcon} onClick={props.switchThemes} auto size="small"></Button>
+                <Button icon={displayIcon} onClick={switchThemes} auto size="small"></Button>
               </Container>
             </Col>
           </Row>

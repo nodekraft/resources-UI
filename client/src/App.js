@@ -1,32 +1,13 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-
+import React, { Container } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { LayoutDefault } from './layouts/LayoutDefault';
 import { HomePage } from './views/HomePage'
 
-function RouteWrapper({
-  component: Component,
-  layout: Layout,
-  ...rest
-}) {
-  return (
-    <Route 
-      {...rest} 
-      render={(props) =>
-        <Layout {...props}>
-          <Component {...props} />
-        </Layout>
-      } />
-  )
-}
+// import RouterWrapper from './utils/RouterWrapper'
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <RouteWrapper path="/" component={HomePage} layout={LayoutDefault} />
-      </Switch>
-    </Router>
+    <LayoutDefault />
   );
 }
 
